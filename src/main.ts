@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three-stdlib";
-import "./style.css";
+import "../public/style.css";
 import { ExportManager } from "./ExportManager";
 
 const canvas = document.getElementById("canvas") as HTMLCanvasElement;
