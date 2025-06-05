@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parametric Table</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" crossorigin src="/assets/index-CUbMHrMI.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-XwQSsKKI.css">
+  </head>
+  <body>
+    <!-- In your HTML file, replace the existing <div id="controls">…</div> with this: -->
+    <div id="controls">
+      <div id="dimensions">
+        <h4>Dimensions:</h4>
+        <label for="width">
+          Width: <span id="widthVal" class="dim">4</span>
+        </label>
+        <input type="range" id="width" min="1" max="5" step="0.1" value="4" />
+        <br />
+        <label for="depth">
+          Depth: <span id="depthVal" class="dim">2</span>
+        </label>
+        <input type="range" id="depth" min="1" max="5" step="0.1" value="2" />
+        <br />
+        <label for="height">
+          Height: <span id="heightVal" class="dim">3</span>
+        </label>
+        <input type="range" id="height" min="1" max="5" step="0.1" value="3" />
+      </div>
+
+      <div id="TableTop">
+        <h4>Table Top:</h4>
+        <label for="fillet">
+          Fillet Radius: <span id="filletVal" class="dim">0.1</span>
+        </label>
+        <input
+          type="range"
+          id="fillet"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.1"
+        />
+        <br />
+        <label for="thickness">
+          Thickness: <span id="thickVal" class="dim">0.1</span>
+        </label>
+        <input
+          type="range"
+          id="thickness"
+          min="0.01"
+          max="1"
+          step="0.01"
+          value="0.1"
+        />
+        <br />
+      </div>
+
+      <div id="Legs">
+        <h4>Legs:</h4>
+        <label for="offset">
+          Offset: <span id="offsetVal" class="dim">0.5</span>
+        </label>
+        <input
+          type="range"
+          id="offset"
+          min="0.5"
+          max="1"
+          step="0.01"
+          value="0.5"
+        />
+        <br />
+        <label for="legSize">
+          Size: <span id="legSizeVal" class="dim">0.2</span>
+        </label>
+        <input
+          type="range"
+          id="legSize"
+          min="0.05"
+          max="0.5"
+          step="0.01"
+          value="0.2"
+        />
+        <br />
+        <label for="crossSection">
+          Cross Section:
+          <select id="crossSection" name="crossSection">
+            <option value="circle">Circle</option>
+            <option value="triangle">Triangle</option>
+            <option value="square" selected>Square</option>
+            <option value="pentagon">Pentagon</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="Materials">
+        <h4>Materials:</h4>
+        <label for="tabletop">
+          Table Top:
+          <select id="tabletop" name="tabletop">
+            <option value="wood">Wood</option>
+            <option value="stone" selected>Stone</option>
+            <option value="steel">Steel</option>
+            <option value="glass">Glass</option>
+          </select>
+        </label>
+        <br />
+        <label for="legMat">
+          Legs:
+          <select id="legMat" name="legMat">
+            <option value="wood" selected>Wood</option>
+            <option value="stone">Stone</option>
+            <option value="steel">Steel</option>
+            <option value="glass">Glass</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="export-section">
+        <h4>Export As:</h4>
+        <button id="export-gltf" class="export-btn">GLTF</button>
+        <button id="export-glb" class="export-btn">GLB</button>
+      </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+  </body>
+</html>
